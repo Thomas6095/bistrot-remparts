@@ -222,6 +222,8 @@ export default function Hero() {
           left-1/2
           -translate-x-1/2
           z-20
+          portrait:flex
+          landscape:hidden
         "
       >
         <div className="w-7 h-12 rounded-full border border-white/30 flex justify-center backdrop-blur-sm">

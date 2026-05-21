@@ -189,7 +189,12 @@ export default function Hero() {
               duration: 1,
               delay: 0.6,
             }}
-            className="flex flex-wrap items-center gap-4 mt-10 text-sm text-neutral-400"
+            className="
+              flex flex-wrap items-center gap-4
+              mt-10
+              pb-16 sm:pb-10 lg:pb-0
+              text-sm text-neutral-400
+            "
           >
             <span>Produits frais</span>
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
@@ -210,12 +215,13 @@ export default function Hero() {
         }}
         className="
           absolute
-          bottom-4
+          bottom-2
+          sm:bottom-4
           md:bottom-6
           lg:bottom-8
           left-1/2
           -translate-x-1/2
-          hidden sm:block
+          z-20
         "
       >
         <div className="w-7 h-12 rounded-full border border-white/30 flex justify-center backdrop-blur-sm">

@@ -295,9 +295,10 @@ export default function ReservationForm({
             </div>
 
             {/* DATE / HEURE */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 min-w-0">
 
-              <div>
+              {/* DATE */}
+              <div className="min-w-0">
 
                 <label className="block text-sm text-neutral-300 mb-3">
                   Date
@@ -309,12 +310,22 @@ export default function ReservationForm({
                   required
                   value={formData.date}
                   onChange={handleChange}
-                  className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 text-white outline-none transition-all duration-300 focus:border-amber-500/50"
+                  className="
+                    w-full min-w-0 rounded-2xl
+                    border border-white/10
+                    bg-white/[0.03]
+                    px-4 sm:px-6 py-5
+                    text-white
+                    outline-none
+                    transition-all duration-300
+                    focus:border-amber-500/50
+                  "
                 />
 
               </div>
 
-              <div>
+              {/* HEURE */}
+              <div className="min-w-0">
 
                 <label className="block text-sm text-neutral-300 mb-3">
                   Heure
@@ -326,7 +337,16 @@ export default function ReservationForm({
                   required
                   value={formData.time}
                   onChange={handleChange}
-                  className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 text-white outline-none transition-all duration-300 focus:border-amber-500/50"
+                  className="
+                    w-full min-w-0 rounded-2xl
+                    border border-white/10
+                    bg-white/[0.03]
+                    px-4 sm:px-6 py-5
+                    text-white
+                    outline-none
+                    transition-all duration-300
+                    focus:border-amber-500/50
+                  "
                 />
 
               </div>

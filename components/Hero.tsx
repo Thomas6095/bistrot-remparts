@@ -5,7 +5,16 @@ import { motion } from "framer-motion"
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black text-white">
+    <section
+      className="
+        relative
+        min-h-screen
+        landscape:min-h-[120vh]
+        overflow-hidden
+        bg-black
+        text-white
+      "
+    >
 
       {/* Background Image */}
       <motion.div
@@ -41,7 +50,15 @@ export default function Hero() {
       <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-amber-500/10 blur-3xl rounded-full pointer-events-none" />
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center min-h-screen px-6 sm:px-10 lg:px-20">
+      <div
+        className="
+          relative z-10
+          flex items-center
+          min-h-screen
+          landscape:py-24
+          px-6 sm:px-10 lg:px-20
+        "
+      >
         <div className="max-w-2xl pt-32 md:pt-20">
 
           {/* Social proof */}
@@ -192,7 +209,7 @@ export default function Hero() {
             className="
               flex flex-wrap items-center gap-4
               mt-10
-              pb-16 sm:pb-10 lg:pb-0
+              pb-20 sm:pb-16 lg:pb-0 landscape:pb-24
               text-sm text-neutral-400
             "
           >
@@ -215,15 +232,13 @@ export default function Hero() {
         }}
         className="
           absolute
-          bottom-2
-          sm:bottom-4
+          bottom-4
+          sm:bottom-5
           md:bottom-6
           lg:bottom-8
           left-1/2
           -translate-x-1/2
           z-20
-          portrait:flex
-          landscape:hidden
         "
       >
         <div className="w-7 h-12 rounded-full border border-white/30 flex justify-center backdrop-blur-sm">

@@ -213,7 +213,14 @@ export default function ReservationForm({
             duration: 0.7,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 bg-black/0 lg:bg-transparent backdrop-blur-[2px] lg:backdrop-blur-0"
+          className="
+            relative z-10
+            overflow-hidden
+            min-w-0
+            p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16
+            bg-black/0 lg:bg-transparent
+            backdrop-blur-[2px] lg:backdrop-blur-0
+          "
         >
 
           {/* HEADER */}
@@ -295,10 +302,10 @@ export default function ReservationForm({
             </div>
 
             {/* DATE / HEURE */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 min-w-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-hidden">
 
               {/* DATE */}
-              <div className="min-w-0">
+              <div className="w-full min-w-0 overflow-hidden">
 
                 <label className="block text-sm text-neutral-300 mb-3">
                   Date
@@ -311,10 +318,17 @@ export default function ReservationForm({
                   value={formData.date}
                   onChange={handleChange}
                   className="
-                    w-full min-w-0 rounded-2xl
+                    block
+                    w-full
+                    min-w-0
+                    max-w-full
+                    appearance-none
+                    overflow-hidden
+                    rounded-2xl
                     border border-white/10
                     bg-white/[0.03]
-                    px-4 sm:px-6 py-5
+                    px-4 py-5
+                    text-sm sm:text-base
                     text-white
                     outline-none
                     transition-all duration-300
@@ -325,7 +339,7 @@ export default function ReservationForm({
               </div>
 
               {/* HEURE */}
-              <div className="min-w-0">
+              <div className="w-full min-w-0 overflow-hidden">
 
                 <label className="block text-sm text-neutral-300 mb-3">
                   Heure
@@ -338,10 +352,17 @@ export default function ReservationForm({
                   value={formData.time}
                   onChange={handleChange}
                   className="
-                    w-full min-w-0 rounded-2xl
+                    block
+                    w-full
+                    min-w-0
+                    max-w-full
+                    appearance-none
+                    overflow-hidden
+                    rounded-2xl
                     border border-white/10
                     bg-white/[0.03]
-                    px-4 sm:px-6 py-5
+                    px-4 py-5
+                    text-sm sm:text-base
                     text-white
                     outline-none
                     transition-all duration-300

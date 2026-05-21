@@ -208,7 +208,15 @@ export default function Hero() {
           delay: 1,
           duration: 1,
         }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="
+          absolute
+          bottom-4
+          md:bottom-6
+          lg:bottom-8
+          left-1/2
+          -translate-x-1/2
+          hidden sm:block
+        "
       >
         <div className="w-7 h-12 rounded-full border border-white/30 flex justify-center backdrop-blur-sm">
           <motion.div
